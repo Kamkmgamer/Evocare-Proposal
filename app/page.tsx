@@ -22,7 +22,7 @@ export default function Home() {
           <div className="mt-6 flex gap-4 flex-col sm:flex-row">
             <Link href="/flutter" className="btn-primary">
               <div className="flex items-center gap-3">
-                <Image src="/file.svg" alt="flutter" width={20} height={20} />
+                <Image src="https://www.svgrepo.com/show/349363/flutter.svg" alt="flutter" width={20} height={20} />
                 <div className="text-sm">
                   <div className="font-semibold">Flutter</div>
                   <div className="text-sm muted">أداء عالي وتجربة مستخدم ثابتة عبر المنصات</div>
@@ -32,7 +32,7 @@ export default function Home() {
 
             <Link href="/react-native" className="btn-primary" >
               <div className="flex items-center gap-3">
-                <Image src="/globe.svg" alt="react native" width={20} height={20} />
+                <Image src="https://www.svgrepo.com/show/521303/react-16.svg" alt="react native" width={20} height={20} />
                 <div className="text-sm">
                   <div className="font-semibold">React Native</div>
                   <div className="text-sm muted">تطوير سريع ودعم واسع لمكتبات JavaScript</div>
