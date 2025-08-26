@@ -99,10 +99,9 @@ export default function RNOffer() {
         <section className="card fade-up">
           <h2>خطة الدفع المقترحة</h2>
           <ol className="list-inside list-decimal space-y-2">
-            <li><strong>الدفعة الأولى — 30%:</strong> عند توقيع العقد وبدء العمل — 54,000 جنيه.</li>
+            <li><strong>الدفعة الأولى — 40%:</strong> عند توقيع العقد وبدء العمل — 72,000 جنيه.</li>
             <li><strong>الدفعة الثانية — 30%:</strong> عند تسليم نسخة تجريبية (Prototype) — 54,000 جنيه.</li>
             <li><strong>الدفعة الثالثة — 30%:</strong> عند تسليم النسخة الكاملة قبل الاختبارات النهائية — 54,000 جنيه.</li>
-            <li><strong>الدفعة الرابعة — 10%:</strong> عند الإطلاق الرسمي على المتاجر — 18,000 جنيه.</li>
           </ol>
           <p className="muted">يمكن الاتفاق على خطة دفع بديلة أو دفعات أصغر حسب الاتفاق.</p>
         </section>
