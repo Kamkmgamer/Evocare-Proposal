@@ -92,7 +92,22 @@ export default function RNOffer() {
             <li>تطوير واجهة القرآن والصوتيات: 60,000 جنيه</li>
             <li>مواقيت الصلاة والتنبيهات + تكامل API: 15,000 جنيه</li>
             <li>اختبارات وضمان الجودة: 20,000 جنيه</li>
-            <li>نشر ودعم أولي: 10,000 جنيه</li>
+                        <li>نشر ودعم أولي: 10,000 جنيه</li>
+          </ul>
+        </section>
+
+        <section className="card fade-up">
+          <h2>ترخيصات النشر السنوية</h2>
+          <h3>متجر جوجل بلاي (Google Play Store)</h3>
+          <ul className="list-inside list-disc space-y-1">
+            <li>اشتراك سنوي: 100 دولار أمريكي</li>
+          </ul>
+          <h3>متجر تطبيقات آبل (Apple App Store)</h3>
+          <ul className="list-inside list-disc space-y-1">
+            <li>اشتراك سنوي: 150 دولار أمريكي</li>
+          
+
+        
           </ul>
         </section>
 

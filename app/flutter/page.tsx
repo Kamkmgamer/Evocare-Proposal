@@ -96,6 +96,18 @@ export default function FlutterOffer() {
         </section>
 
         <section className="card fade-up">
+          <h2>ترخيصات النشر السنوية</h2>
+          <h3>متجر جوجل بلاي (Google Play Store)</h3>
+          <ul className="list-inside list-disc space-y-1">
+            <li>اشتراك سنوي: 100 دولار أمريكي</li>
+          </ul>
+          <h3>متجر تطبيقات آبل (Apple App Store)</h3>
+          <ul className="list-inside list-disc space-y-1">
+            <li>اشتراك سنوي: 150 دولار أمريكي</li>
+          </ul>
+        </section>
+
+        <section className="card fade-up">
           <h2>خطة الدفع</h2>
           <ol className="list-inside list-decimal space-y-2">
               <li><strong>الدفعة الأولى — 40%:</strong> عند توقيع العقد وبدء العمل — 92,000 جنيه.</li>
