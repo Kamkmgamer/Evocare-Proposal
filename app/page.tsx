@@ -8,15 +8,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import { Separator } from "@/components/ui/separator";
 import {
   ClipboardList,
@@ -32,9 +23,7 @@ import {
   FileText,
   Wrench,
   CheckCircle2,
-  Sparkles,
   Star,
-  ArrowRight,
   Lightbulb,
   Clock,
   Zap,
@@ -45,14 +34,62 @@ import {
   Shield,
   TrendingUp,
   Globe,
+  Moon,
+  Sparkles,
 } from "lucide-react";
+
+// Islamic Crescent and Star SVG Component
+const IslamicCrescent = ({ className = "" }: { className?: string }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.31 0 2.56-.26 3.71-.72-2.38-1.51-3.96-4.17-3.96-7.28 0-3.11 1.58-5.77 3.96-7.28C14.56 2.26 13.31 2 12 2z" />
+    <circle cx="18" cy="6" r="2" />
+  </svg>
+);
+
+// Islamic Eight-Pointed Star Component
+const IslamicStar = ({ className = "" }: { className?: string }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path d="M12 0L14.12 7.04L21.21 6.34L15.8 11.2L18.47 18L12 14.4L5.53 18L8.2 11.2L2.79 6.34L9.88 7.04L12 0Z" />
+  </svg>
+);
+
+// Decorative Arabesque Border Component
+const ArabesqueBorder = () => (
+  <div className="flex items-center justify-center gap-3 py-4">
+    <div className="h-[2px] w-12 bg-gradient-to-r from-transparent via-[oklch(0.72_0.14_75)] to-[oklch(0.42_0.12_155)]" />
+    <IslamicStar className="w-4 h-4 text-[oklch(0.72_0.14_75)]" />
+    <IslamicCrescent className="w-5 h-5 text-[oklch(0.42_0.12_155)]" />
+    <IslamicStar className="w-4 h-4 text-[oklch(0.72_0.14_75)]" />
+    <div className="h-[2px] w-12 bg-gradient-to-l from-transparent via-[oklch(0.72_0.14_75)] to-[oklch(0.42_0.12_155)]" />
+  </div>
+);
+
+// Bismillah Component
+const Bismillah = () => (
+  <div className="text-center py-6 animate-fade-up">
+    <p className="text-2xl md:text-3xl font-bold text-[oklch(0.42_0.12_155)] font-[var(--font-arabic)]">
+      بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+    </p>
+    <ArabesqueBorder />
+  </div>
+);
 
 export default function Home() {
   return (
     <div className="min-h-screen premium-bg relative overflow-hidden">
       {/* Animated Background Orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Morphing gradient orbs */}
+        {/* Morphing gradient orbs - Islamic green and gold */}
         <div className="orb orb-1 -top-40 -right-40 animate-morph" />
         <div
           className="orb orb-2 -bottom-20 -left-20 animate-morph"
@@ -63,30 +100,61 @@ export default function Home() {
           style={{ animationDelay: "-2s" }}
         />
 
-        {/* Grid pattern overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,oklch(0.55_0.17_160/0.03)_1px,transparent_1px),linear-gradient(to_bottom,oklch(0.55_0.17_160/0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+        {/* Floating decorative crescents */}
+        <div className="absolute top-20 right-[15%] opacity-10 animate-crescent-float">
+          <IslamicCrescent className="w-24 h-24 text-[oklch(0.42_0.12_155)]" />
+        </div>
+        <div
+          className="absolute bottom-40 left-[10%] opacity-10 animate-crescent-float"
+          style={{ animationDelay: "-2s" }}
+        >
+          <IslamicCrescent className="w-16 h-16 text-[oklch(0.72_0.14_75)]" />
+        </div>
+
+        {/* Twinkling stars */}
+        <div className="absolute top-32 left-[20%] animate-star-twinkle">
+          <IslamicStar className="w-3 h-3 text-[oklch(0.72_0.14_75)]" />
+        </div>
+        <div
+          className="absolute top-48 right-[25%] animate-star-twinkle"
+          style={{ animationDelay: "-1s" }}
+        >
+          <IslamicStar className="w-2 h-2 text-[oklch(0.65_0.12_80)]" />
+        </div>
+        <div
+          className="absolute bottom-60 right-[15%] animate-star-twinkle"
+          style={{ animationDelay: "-0.5s" }}
+        >
+          <IslamicStar className="w-4 h-4 text-[oklch(0.72_0.14_75)]" />
+        </div>
+
+        {/* Islamic geometric pattern overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,oklch(0.42_0.12_155/0.02)_1px,transparent_1px),linear-gradient(to_bottom,oklch(0.42_0.12_155/0.02)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
 
         {/* Radial gradient spotlight */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-radial from-primary/10 via-transparent to-transparent blur-3xl" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-radial from-[oklch(0.42_0.12_155/0.08)] via-transparent to-transparent blur-3xl" />
       </div>
 
       <div className="relative z-10 p-6 sm:p-8 md:p-12 pb-24">
+        {/* Bismillah */}
+        <Bismillah />
+
         {/* Header */}
         <header className="max-w-5xl mx-auto mb-16 text-center">
-          {/* Animated Badge */}
-          <div className="animate-bounce-in delay-100 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-primary/15 via-accent/15 to-primary/15 border border-primary/30 mb-8 shadow-emerald-lg animate-scale-pulse backdrop-blur-sm">
-            <Sparkles className="w-5 h-5 text-primary animate-pulse" />
-            <span className="text-sm font-bold text-primary tracking-wide">
+          {/* Animated Badge with Crescent */}
+          <div className="animate-bounce-in delay-100 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[oklch(0.42_0.12_155/0.1)] via-[oklch(0.72_0.14_75/0.15)] to-[oklch(0.42_0.12_155/0.1)] border border-[oklch(0.72_0.14_75/0.4)] mb-8 shadow-gold backdrop-blur-sm">
+            <Moon className="w-5 h-5 text-[oklch(0.42_0.12_155)] animate-pulse" />
+            <span className="text-sm font-bold text-[oklch(0.42_0.12_155)] tracking-wide">
               عرض سعر حصري
             </span>
             <Sparkles
-              className="w-5 h-5 text-primary animate-pulse"
+              className="w-5 h-5 text-[oklch(0.72_0.14_75)] animate-pulse"
               style={{ animationDelay: "0.5s" }}
             />
           </div>
 
           {/* Main Title with staggered animation */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-gradient-emerald leading-tight animate-fade-up delay-200">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-gradient-islamic leading-tight animate-fade-up delay-200">
             خطة تطوير نظام إدارة المحتوى
           </h1>
 
@@ -99,17 +167,17 @@ export default function Home() {
             Quran App CMS - Development Plan & Pricing
           </p>
 
-          {/* Decorative line */}
+          {/* Decorative Islamic line */}
           <div className="mt-10 flex items-center justify-center gap-4 animate-fade-up delay-500">
-            <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary/50" />
-            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <div className="h-px w-16 bg-gradient-to-l from-transparent to-primary/50" />
+            <div className="h-px w-16 bg-gradient-to-r from-transparent to-[oklch(0.72_0.14_75)]" />
+            <IslamicCrescent className="w-5 h-5 text-[oklch(0.42_0.12_155)] animate-crescent-float" />
+            <div className="h-px w-16 bg-gradient-to-l from-transparent to-[oklch(0.72_0.14_75)]" />
           </div>
         </header>
 
         <main className="max-w-5xl mx-auto space-y-12">
           {/* Overview Card */}
-          <Card className="glass hover-lift animate-fade-up delay-100 border-primary/10">
+          <Card className="glass hover-lift animate-fade-up delay-100 border-[oklch(0.72_0.14_75/0.2)] islamic-card-frame">
             <CardHeader>
               <div className="flex items-center gap-3">
                 <div className="icon-box">
@@ -147,10 +215,10 @@ export default function Home() {
 
             <div className="grid md:grid-cols-2 gap-6">
               {/* Backend */}
-              <Card className="glass card-3d shine-effect group animate-fade-up delay-300 border-transparent hover:border-primary/20 transition-all duration-300">
+              <Card className="glass card-3d shine-effect group animate-fade-up delay-300 border-transparent hover:border-[oklch(0.42_0.12_155/0.3)] transition-all duration-300">
                 <CardHeader className="pb-4">
                   <div className="flex items-center gap-3">
-                    <div className="icon-box bg-gradient-to-br from-blue-500/10 to-blue-600/20 text-blue-600">
+                    <div className="icon-box bg-gradient-to-br from-[oklch(0.45_0.12_200/0.15)] to-[oklch(0.38_0.1_175/0.2)] text-[oklch(0.4_0.1_200)]">
                       <Server className="w-5 h-5" />
                     </div>
                     <div>
@@ -171,7 +239,7 @@ export default function Home() {
                         key={i}
                         className="flex items-center gap-3 text-foreground/80"
                       >
-                        <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-[oklch(0.42_0.12_155)] flex-shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -180,10 +248,10 @@ export default function Home() {
               </Card>
 
               {/* Dashboard */}
-              <Card className="glass card-3d shine-effect group animate-fade-up delay-400 border-transparent hover:border-primary/20 transition-all duration-300">
+              <Card className="glass card-3d shine-effect group animate-fade-up delay-400 border-transparent hover:border-[oklch(0.42_0.12_155/0.3)] transition-all duration-300">
                 <CardHeader className="pb-4">
                   <div className="flex items-center gap-3">
-                    <div className="icon-box bg-gradient-to-br from-purple-500/10 to-purple-600/20 text-purple-600">
+                    <div className="icon-box bg-gradient-to-br from-[oklch(0.55_0.15_300/0.15)] to-[oklch(0.45_0.12_280/0.2)] text-[oklch(0.5_0.14_290)]">
                       <LayoutDashboard className="w-5 h-5" />
                     </div>
                     <div>
@@ -204,7 +272,7 @@ export default function Home() {
                         key={i}
                         className="flex items-center gap-3 text-foreground/80"
                       >
-                        <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-[oklch(0.42_0.12_155)] flex-shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -213,10 +281,10 @@ export default function Home() {
               </Card>
 
               {/* Mobile Integration */}
-              <Card className="glass card-3d shine-effect group animate-fade-up delay-500 border-transparent hover:border-primary/20 transition-all duration-300">
+              <Card className="glass card-3d shine-effect group animate-fade-up delay-500 border-transparent hover:border-[oklch(0.42_0.12_155/0.3)] transition-all duration-300">
                 <CardHeader className="pb-4">
                   <div className="flex items-center gap-3">
-                    <div className="icon-box bg-gradient-to-br from-orange-500/10 to-orange-600/20 text-orange-600">
+                    <div className="icon-box bg-gradient-to-br from-[oklch(0.65_0.14_60/0.15)] to-[oklch(0.55_0.12_50/0.2)] text-[oklch(0.55_0.12_55)]">
                       <Smartphone className="w-5 h-5" />
                     </div>
                     <div>
@@ -237,7 +305,7 @@ export default function Home() {
                         key={i}
                         className="flex items-center gap-3 text-foreground/80"
                       >
-                        <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-[oklch(0.42_0.12_155)] flex-shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -246,10 +314,10 @@ export default function Home() {
               </Card>
 
               {/* Infrastructure */}
-              <Card className="glass card-3d shine-effect group animate-fade-up delay-600 border-transparent hover:border-primary/20 transition-all duration-300">
+              <Card className="glass card-3d shine-effect group animate-fade-up delay-600 border-transparent hover:border-[oklch(0.42_0.12_155/0.3)] transition-all duration-300">
                 <CardHeader className="pb-4">
                   <div className="flex items-center gap-3">
-                    <div className="icon-box bg-gradient-to-br from-teal-500/10 to-teal-600/20 text-teal-600">
+                    <div className="icon-box bg-gradient-to-br from-[oklch(0.5_0.12_175/0.15)] to-[oklch(0.42_0.1_165/0.2)] text-[oklch(0.45_0.1_170)]">
                       <Cloud className="w-5 h-5" />
                     </div>
                     <div>
@@ -270,7 +338,7 @@ export default function Home() {
                         key={i}
                         className="flex items-center gap-3 text-foreground/80"
                       >
-                        <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-[oklch(0.42_0.12_155)] flex-shrink-0" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -280,11 +348,14 @@ export default function Home() {
             </div>
           </section>
 
+          {/* Islamic Decorative Divider */}
+          <ArabesqueBorder />
+
           {/* Pricing Section - Premium Redesign */}
           <section className="space-y-8 animate-fade-up delay-700">
             {/* Section Header */}
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-lg shadow-emerald-500/25">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[oklch(0.42_0.12_155)] to-[oklch(0.38_0.1_175)] flex items-center justify-center shadow-lg shadow-[oklch(0.42_0.12_155/0.25)]">
                 <DollarSign className="w-7 h-7 text-white" />
               </div>
               <div>
@@ -298,11 +369,11 @@ export default function Home() {
             {/* Development Phases */}
             <div className="space-y-4">
               <div className="flex items-center gap-2 mb-4">
-                <div className="h-px flex-1 bg-gradient-to-l from-primary/30 to-transparent" />
-                <span className="text-sm font-semibold text-primary px-3 py-1 rounded-full bg-primary/10">
+                <div className="h-px flex-1 bg-gradient-to-l from-[oklch(0.42_0.12_155/0.3)] to-transparent" />
+                <span className="text-sm font-semibold text-[oklch(0.42_0.12_155)] px-3 py-1 rounded-full bg-[oklch(0.42_0.12_155/0.1)]">
                   مراحل التطوير
                 </span>
-                <div className="h-px flex-1 bg-gradient-to-r from-primary/30 to-transparent" />
+                <div className="h-px flex-1 bg-gradient-to-r from-[oklch(0.42_0.12_155/0.3)] to-transparent" />
               </div>
 
               <div className="grid gap-4">
@@ -314,9 +385,8 @@ export default function Home() {
                     egp: "8,800",
                     sar: "1,320",
                     usd: "$176",
-                    color: "from-blue-500 to-blue-600",
-                    iconBg: "bg-blue-500/10",
-                    iconColor: "text-blue-500",
+                    iconBg: "bg-[oklch(0.45_0.12_200/0.1)]",
+                    iconColor: "text-[oklch(0.4_0.1_200)]",
                   },
                   {
                     icon: LayoutDashboard,
@@ -325,9 +395,8 @@ export default function Home() {
                     egp: "16,800",
                     sar: "2,520",
                     usd: "$336",
-                    color: "from-purple-500 to-purple-600",
-                    iconBg: "bg-purple-500/10",
-                    iconColor: "text-purple-500",
+                    iconBg: "bg-[oklch(0.55_0.15_300/0.1)]",
+                    iconColor: "text-[oklch(0.5_0.14_290)]",
                   },
                   {
                     icon: Smartphone,
@@ -336,9 +405,8 @@ export default function Home() {
                     egp: "12,800",
                     sar: "1,920",
                     usd: "$256",
-                    color: "from-orange-500 to-orange-600",
-                    iconBg: "bg-orange-500/10",
-                    iconColor: "text-orange-500",
+                    iconBg: "bg-[oklch(0.65_0.14_60/0.1)]",
+                    iconColor: "text-[oklch(0.55_0.12_55)]",
                   },
                   {
                     icon: Shield,
@@ -347,14 +415,13 @@ export default function Home() {
                     egp: "9,600",
                     sar: "1,440",
                     usd: "$192",
-                    color: "from-teal-500 to-teal-600",
-                    iconBg: "bg-teal-500/10",
-                    iconColor: "text-teal-500",
+                    iconBg: "bg-[oklch(0.5_0.12_175/0.1)]",
+                    iconColor: "text-[oklch(0.45_0.1_170)]",
                   },
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="group relative bg-white dark:bg-slate-900/50 rounded-2xl border border-border/50 p-5 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5"
+                    className="group relative bg-white/80 dark:bg-[oklch(0.18_0.03_155/0.5)] rounded-2xl border border-[oklch(0.72_0.14_75/0.2)] p-5 hover:border-[oklch(0.42_0.12_155/0.3)] transition-all duration-300 hover:shadow-islamic-lg backdrop-blur-sm"
                   >
                     <div className="flex items-center justify-between gap-4">
                       <div className="flex items-center gap-4">
@@ -393,7 +460,7 @@ export default function Home() {
                           <p className="text-xs text-muted-foreground mb-1">
                             ج.م
                           </p>
-                          <p className="font-bold text-xl text-primary">
+                          <p className="font-bold text-xl text-[oklch(0.42_0.12_155)]">
                             {item.egp}
                           </p>
                         </div>
@@ -404,33 +471,45 @@ export default function Home() {
               </div>
 
               {/* Development Subtotal */}
-              <div className="relative bg-gradient-to-l from-primary/5 via-primary/10 to-accent/5 rounded-2xl border border-primary/20 p-5 mt-6">
+              <div className="relative bg-gradient-to-l from-[oklch(0.42_0.12_155/0.05)] via-[oklch(0.42_0.12_155/0.1)] to-[oklch(0.72_0.14_75/0.05)] rounded-2xl border border-[oklch(0.42_0.12_155/0.2)] p-5 mt-6">
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <TrendingUp className="w-6 h-6 text-primary" />
+                    <div className="w-12 h-12 rounded-xl bg-[oklch(0.42_0.12_155/0.1)] flex items-center justify-center">
+                      <TrendingUp className="w-6 h-6 text-[oklch(0.42_0.12_155)]" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-primary text-lg">
+                      <h4 className="font-bold text-[oklch(0.42_0.12_155)] text-lg">
                         المجموع الفرعي (التطوير)
                       </h4>
-                      <p className="text-sm text-primary/70">
+                      <p className="text-sm text-[oklch(0.42_0.12_155/0.7)]">
                         Development Subtotal
                       </p>
                     </div>
                   </div>
                   <div className="flex items-center gap-6 text-left">
                     <div className="hidden sm:block text-center">
-                      <p className="text-xs text-primary/60 mb-1">USD</p>
-                      <p className="font-bold text-primary">$960</p>
+                      <p className="text-xs text-[oklch(0.42_0.12_155/0.6)] mb-1">
+                        USD
+                      </p>
+                      <p className="font-bold text-[oklch(0.42_0.12_155)]">
+                        $960
+                      </p>
                     </div>
                     <div className="hidden md:block text-center">
-                      <p className="text-xs text-primary/60 mb-1">ر.س</p>
-                      <p className="font-bold text-primary">7,200</p>
+                      <p className="text-xs text-[oklch(0.42_0.12_155/0.6)] mb-1">
+                        ر.س
+                      </p>
+                      <p className="font-bold text-[oklch(0.42_0.12_155)]">
+                        7,200
+                      </p>
                     </div>
                     <div className="text-center min-w-[80px]">
-                      <p className="text-xs text-primary/60 mb-1">ج.م</p>
-                      <p className="font-black text-2xl text-primary">48,000</p>
+                      <p className="text-xs text-[oklch(0.42_0.12_155/0.6)] mb-1">
+                        ج.م
+                      </p>
+                      <p className="font-black text-2xl text-[oklch(0.42_0.12_155)]">
+                        48,000
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -440,18 +519,18 @@ export default function Home() {
             {/* Design Phase */}
             <div className="space-y-4">
               <div className="flex items-center gap-2 mb-4">
-                <div className="h-px flex-1 bg-gradient-to-l from-pink-500/30 to-transparent" />
-                <span className="text-sm font-semibold text-pink-600 px-3 py-1 rounded-full bg-pink-500/10">
+                <div className="h-px flex-1 bg-gradient-to-l from-[oklch(0.72_0.14_75/0.4)] to-transparent" />
+                <span className="text-sm font-semibold text-[oklch(0.65_0.12_80)] px-3 py-1 rounded-full bg-[oklch(0.72_0.14_75/0.15)]">
                   مرحلة التصميم
                 </span>
-                <div className="h-px flex-1 bg-gradient-to-r from-pink-500/30 to-transparent" />
+                <div className="h-px flex-1 bg-gradient-to-r from-[oklch(0.72_0.14_75/0.4)] to-transparent" />
               </div>
 
-              <div className="group relative bg-white dark:bg-slate-900/50 rounded-2xl border border-border/50 p-5 hover:border-pink-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/5">
+              <div className="group relative bg-white/80 dark:bg-[oklch(0.18_0.03_155/0.5)] rounded-2xl border border-[oklch(0.72_0.14_75/0.3)] p-5 hover:border-[oklch(0.72_0.14_75/0.5)] transition-all duration-300 hover:shadow-gold-lg backdrop-blur-sm">
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-pink-500/10 flex items-center justify-center transition-transform group-hover:scale-110">
-                      <Palette className="w-6 h-6 text-pink-500" />
+                    <div className="w-12 h-12 rounded-xl bg-[oklch(0.72_0.14_75/0.15)] flex items-center justify-center transition-transform group-hover:scale-110">
+                      <Palette className="w-6 h-6 text-[oklch(0.65_0.12_80)]" />
                     </div>
                     <div>
                       <h4 className="font-bold text-foreground text-lg">
@@ -473,62 +552,79 @@ export default function Home() {
                     </div>
                     <div className="text-center min-w-[80px]">
                       <p className="text-xs text-muted-foreground mb-1">ج.م</p>
-                      <p className="font-bold text-xl text-pink-500">10,150</p>
+                      <p className="font-bold text-xl text-[oklch(0.65_0.12_80)]">
+                        10,150
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Grand Total */}
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 p-1 shadow-2xl shadow-emerald-500/30 animate-pulse-glow">
+            {/* Grand Total - Islamic Premium Design */}
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[oklch(0.42_0.12_155)] via-[oklch(0.38_0.1_165)] to-[oklch(0.35_0.1_175)] p-1 shadow-2xl shadow-[oklch(0.42_0.12_155/0.3)] animate-islamic-glow">
               {/* Animated gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/20 via-transparent to-cyan-400/20 animate-gradient" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.72_0.14_75/0.15)] via-transparent to-[oklch(0.72_0.14_75/0.15)] animate-gradient" />
 
-              {/* Grid pattern */}
-              <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:2rem_2rem]" />
+              {/* Islamic geometric pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:2rem_2rem]" />
+              </div>
+
+              {/* Decorative crescents */}
+              <div className="absolute top-4 right-10 opacity-30">
+                <IslamicCrescent className="w-8 h-8 text-[oklch(0.72_0.14_75)]" />
+              </div>
+              <div
+                className="absolute bottom-4 left-10 opacity-30"
+                style={{ transform: "rotate(180deg)" }}
+              >
+                <IslamicCrescent className="w-6 h-6 text-[oklch(0.72_0.14_75)]" />
+              </div>
 
               {/* Sparkle particles */}
-              <div className="absolute top-4 right-10 w-2 h-2 bg-white rounded-full animate-ping opacity-75" />
+              <div className="absolute top-4 left-[30%] w-2 h-2 bg-[oklch(0.72_0.14_75)] rounded-full animate-ping opacity-75" />
               <div
-                className="absolute bottom-6 left-16 w-1.5 h-1.5 bg-yellow-300 rounded-full animate-ping opacity-75"
+                className="absolute bottom-6 right-[25%] w-1.5 h-1.5 bg-[oklch(0.85_0.1_85)] rounded-full animate-ping opacity-75"
                 style={{ animationDelay: "0.5s" }}
               />
-              <div
-                className="absolute top-1/2 left-8 w-1 h-1 bg-white rounded-full animate-ping opacity-50"
-                style={{ animationDelay: "1s" }}
-              />
 
-              <div className="relative bg-gradient-to-br from-emerald-600/90 via-teal-600/90 to-cyan-600/90 rounded-[22px] p-6 md:p-8 backdrop-blur-sm">
+              <div className="relative bg-gradient-to-br from-[oklch(0.42_0.12_155/0.95)] via-[oklch(0.38_0.1_165/0.95)] to-[oklch(0.35_0.1_175/0.95)] rounded-[22px] p-6 md:p-8 backdrop-blur-sm">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                   <div className="flex items-center gap-4 text-center md:text-right">
-                    <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center animate-float">
-                      <Star className="w-8 h-8 text-yellow-300 drop-shadow-[0_0_10px_rgba(253,224,71,0.5)]" />
+                    <div className="w-16 h-16 rounded-2xl bg-[oklch(0.72_0.14_75/0.25)] backdrop-blur-sm flex items-center justify-center animate-float">
+                      <IslamicStar className="w-8 h-8 text-[oklch(0.85_0.1_85)] drop-shadow-[0_0_10px_rgba(255,215,0,0.5)]" />
                     </div>
                     <div>
                       <h3 className="text-2xl md:text-3xl font-black text-white drop-shadow-lg">
                         المجموع الكلي
                       </h3>
-                      <p className="text-emerald-100">
+                      <p className="text-[oklch(0.85_0.08_155)]">
                         Grand Total - Full Package
                       </p>
                     </div>
                   </div>
                   <div className="flex items-center gap-8 md:gap-12">
                     <div className="text-center">
-                      <p className="text-sm text-emerald-200 mb-1">USD</p>
+                      <p className="text-sm text-[oklch(0.8_0.06_155)] mb-1">
+                        USD
+                      </p>
                       <p className="text-2xl md:text-3xl font-black text-white drop-shadow-lg">
                         $1,163
                       </p>
                     </div>
                     <div className="hidden sm:block text-center">
-                      <p className="text-sm text-emerald-200 mb-1">ر.س</p>
+                      <p className="text-sm text-[oklch(0.8_0.06_155)] mb-1">
+                        ر.س
+                      </p>
                       <p className="text-2xl md:text-3xl font-black text-white drop-shadow-lg">
                         8,724
                       </p>
                     </div>
                     <div className="text-center">
-                      <p className="text-sm text-emerald-200 mb-1">ج.م</p>
+                      <p className="text-sm text-[oklch(0.8_0.06_155)] mb-1">
+                        ج.م
+                      </p>
                       <p className="text-3xl md:text-5xl font-black text-white drop-shadow-lg animate-scale-pulse">
                         58,150
                       </p>
@@ -539,17 +635,17 @@ export default function Home() {
             </div>
 
             {/* Infrastructure Note */}
-            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-l from-amber-50 to-yellow-50 dark:from-amber-950/20 dark:to-yellow-950/20 border border-amber-200/50 dark:border-amber-800/30 p-5">
-              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-amber-400 to-yellow-500" />
+            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-l from-[oklch(0.95_0.03_85)] to-[oklch(0.92_0.04_80)] dark:from-[oklch(0.25_0.04_85/0.3)] dark:to-[oklch(0.22_0.05_80/0.3)] border border-[oklch(0.72_0.14_75/0.3)] p-5">
+              <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[oklch(0.72_0.14_75)] to-[oklch(0.65_0.12_80)]" />
               <div className="flex items-start gap-4 pr-2">
-                <div className="w-10 h-10 rounded-xl bg-amber-400/20 flex items-center justify-center flex-shrink-0">
-                  <Lightbulb className="w-5 h-5 text-amber-600" />
+                <div className="w-10 h-10 rounded-xl bg-[oklch(0.72_0.14_75/0.2)] flex items-center justify-center flex-shrink-0">
+                  <Lightbulb className="w-5 h-5 text-[oklch(0.6_0.12_75)]" />
                 </div>
                 <div>
-                  <h5 className="font-bold text-amber-800 dark:text-amber-200 mb-1">
+                  <h5 className="font-bold text-[oklch(0.45_0.08_75)] dark:text-[oklch(0.8_0.08_85)] mb-1">
                     خيارات البنية التحتية (شهرياً)
                   </h5>
-                  <p className="text-sm text-amber-700/90 dark:text-amber-300/80 leading-relaxed">
+                  <p className="text-sm text-[oklch(0.5_0.06_75/0.9)] dark:text-[oklch(0.75_0.06_85/0.8)] leading-relaxed">
                     تبدأ مجاناً تماماً (Vercel + Neon Free Tier). يمكن التوسع
                     لاحقاً بتكلفة ~1,500 ج.م/شهر عند الحاجة.
                   </p>
@@ -561,11 +657,11 @@ export default function Home() {
           {/* Payment Options */}
           <section className="max-w-2xl mx-auto">
             {/* Full Package Option */}
-            <Card className="relative overflow-hidden card-3d shine-effect animate-fade-up delay-800 border-2 border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5">
-              <div className="absolute top-0 right-0 left-0 h-1 bg-gradient-to-l from-primary to-accent" />
+            <Card className="relative overflow-hidden card-3d shine-effect animate-fade-up delay-800 border-2 border-[oklch(0.42_0.12_155/0.3)] bg-gradient-to-br from-[oklch(0.42_0.12_155/0.05)] to-[oklch(0.72_0.14_75/0.05)]">
+              <div className="absolute top-0 right-0 left-0 h-1 bg-gradient-to-l from-[oklch(0.42_0.12_155)] via-[oklch(0.55_0.11_120)] to-[oklch(0.72_0.14_75)]" />
               <CardHeader>
-                <Badge className="w-fit bg-gradient-to-l from-primary to-accent text-primary-foreground border-0 mb-2">
-                  <Star className="w-3 h-3 ml-1" />
+                <Badge className="w-fit bg-gradient-to-l from-[oklch(0.42_0.12_155)] to-[oklch(0.38_0.1_175)] text-white border-0 mb-2">
+                  <IslamicStar className="w-3 h-3 ml-1" />
                   الخيار الموصى به
                 </Badge>
                 <CardTitle className="text-xl">الباقة الكاملة</CardTitle>
@@ -573,17 +669,19 @@ export default function Home() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-black text-gradient-emerald">
+                  <span className="text-4xl font-black text-gradient-islamic">
                     58,150
                   </span>
-                  <span className="text-lg font-bold text-primary/70">ج.م</span>
+                  <span className="text-lg font-bold text-[oklch(0.42_0.12_155/0.7)]">
+                    ج.م
+                  </span>
                 </div>
                 <p className="text-muted-foreground">
                   تشمل التطوير الكامل + تصاميم Figma + النشر والتوثيق.
                 </p>
-                <div className="p-3 bg-white/60 dark:bg-white/10 rounded-lg border border-primary/10">
+                <div className="p-3 bg-white/60 dark:bg-white/10 rounded-lg border border-[oklch(0.42_0.12_155/0.15)]">
                   <p className="text-sm font-semibold text-foreground flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-primary" />
+                    <Zap className="w-4 h-4 text-[oklch(0.42_0.12_155)]" />
                     الدفع: 50% مقدماً، 50% عند الاستلام
                   </p>
                 </div>
@@ -592,10 +690,10 @@ export default function Home() {
           </section>
 
           {/* Timeline */}
-          <Card className="glass overflow-hidden animate-fade-up delay-1000">
+          <Card className="glass overflow-hidden animate-fade-up delay-1000 border-[oklch(0.72_0.14_75/0.2)]">
             <CardHeader>
               <div className="flex items-center gap-3">
-                <div className="icon-box-lg bg-gradient-to-br from-indigo-500/10 to-indigo-600/20 text-indigo-600">
+                <div className="icon-box-lg bg-gradient-to-br from-[oklch(0.5_0.14_260/0.15)] to-[oklch(0.45_0.12_270/0.2)] text-[oklch(0.5_0.14_265)]">
                   <Calendar className="w-6 h-6" />
                 </div>
                 <div>
@@ -615,7 +713,7 @@ export default function Home() {
                     time: "أسبوع",
                     desc: "تصاميم Figma كاملة للوحة التحكم والتطبيق",
                     icon: Palette,
-                    colorClass: "icon-pink",
+                    colorClass: "icon-gold",
                   },
                   {
                     title: "المرحلة 1: الواجهة الخلفية",
@@ -648,7 +746,7 @@ export default function Home() {
                 ].map((item, i) => (
                   <div key={i} className="relative pl-10">
                     <div className="timeline-dot" />
-                    <div className="bg-white/50 dark:bg-white/5 rounded-xl p-4 border border-border/50 hover:border-primary/20 transition-all hover:shadow-emerald">
+                    <div className="bg-white/50 dark:bg-white/5 rounded-xl p-4 border border-[oklch(0.72_0.14_75/0.15)] hover:border-[oklch(0.42_0.12_155/0.3)] transition-all hover:shadow-islamic">
                       <div className="flex flex-wrap justify-between items-center gap-2 mb-2">
                         <div className="flex items-center gap-3">
                           <item.icon className={`w-5 h-5 ${item.colorClass}`} />
@@ -658,7 +756,7 @@ export default function Home() {
                         </div>
                         <Badge
                           variant="secondary"
-                          className="bg-primary/10 text-primary border-0"
+                          className="bg-[oklch(0.42_0.12_155/0.1)] text-[oklch(0.42_0.12_155)] border-0"
                         >
                           <Clock className="w-3 h-3 ml-1" />
                           {item.time}
@@ -672,11 +770,11 @@ export default function Home() {
                 ))}
               </div>
 
-              <Separator className="my-6" />
+              <Separator className="my-6 bg-[oklch(0.72_0.14_75/0.2)]" />
 
-              <div className="text-center p-4 bg-gradient-to-l from-primary/5 to-accent/5 rounded-xl border border-primary/10">
+              <div className="text-center p-4 bg-gradient-to-l from-[oklch(0.42_0.12_155/0.05)] to-[oklch(0.72_0.14_75/0.05)] rounded-xl border border-[oklch(0.42_0.12_155/0.15)]">
                 <p className="font-bold text-foreground flex items-center justify-center gap-2">
-                  <Award className="w-5 h-5 text-primary" />
+                  <Award className="w-5 h-5 text-[oklch(0.42_0.12_155)]" />
                   الإجمالي التقديري: 6 أسابيع
                 </p>
               </div>
@@ -686,10 +784,10 @@ export default function Home() {
           {/* Deliverables */}
           <section className="grid md:grid-cols-3 gap-6">
             {/* Code Deliverables */}
-            <Card className="glass card-3d shine-effect animate-fade-up delay-100">
+            <Card className="glass card-3d shine-effect animate-fade-up delay-100 border-[oklch(0.72_0.14_75/0.2)]">
               <CardHeader className="pb-3">
                 <div className="flex items-center gap-3">
-                  <div className="icon-box bg-gradient-to-br from-blue-500/10 to-blue-600/20 text-blue-600">
+                  <div className="icon-box bg-gradient-to-br from-[oklch(0.45_0.12_200/0.15)] to-[oklch(0.4_0.1_190/0.2)] text-[oklch(0.4_0.1_195)]">
                     <Package className="w-5 h-5" />
                   </div>
                   <CardTitle className="text-lg">مخرجات الكود</CardTitle>
@@ -706,8 +804,8 @@ export default function Home() {
                       key={i}
                       className="flex items-center gap-3 text-foreground/80"
                     >
-                      <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-primary" />
+                      <div className="w-5 h-5 rounded-full bg-[oklch(0.42_0.12_155/0.1)] flex items-center justify-center flex-shrink-0">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[oklch(0.42_0.12_155)]" />
                       </div>
                       <span className="text-sm">{item}</span>
                     </li>
@@ -717,10 +815,10 @@ export default function Home() {
             </Card>
 
             {/* Design Deliverables */}
-            <Card className="glass card-3d shine-effect animate-fade-up delay-200">
+            <Card className="glass card-3d shine-effect animate-fade-up delay-200 border-[oklch(0.72_0.14_75/0.2)]">
               <CardHeader className="pb-3">
                 <div className="flex items-center gap-3">
-                  <div className="icon-box bg-gradient-to-br from-pink-500/10 to-pink-600/20 text-pink-600">
+                  <div className="icon-box bg-gradient-to-br from-[oklch(0.72_0.14_75/0.15)] to-[oklch(0.65_0.12_80/0.2)] text-[oklch(0.6_0.12_78)]">
                     <Palette className="w-5 h-5" />
                   </div>
                   <CardTitle className="text-lg">مخرجات التصميم</CardTitle>
@@ -737,8 +835,8 @@ export default function Home() {
                       key={i}
                       className="flex items-center gap-3 text-foreground/80"
                     >
-                      <div className="w-5 h-5 rounded-full bg-pink-500/10 flex items-center justify-center flex-shrink-0">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-pink-500" />
+                      <div className="w-5 h-5 rounded-full bg-[oklch(0.72_0.14_75/0.15)] flex items-center justify-center flex-shrink-0">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[oklch(0.65_0.12_80)]" />
                       </div>
                       <span className="text-sm">{item}</span>
                     </li>
@@ -748,10 +846,10 @@ export default function Home() {
             </Card>
 
             {/* Documentation & Support */}
-            <Card className="glass card-3d shine-effect animate-fade-up delay-300">
+            <Card className="glass card-3d shine-effect animate-fade-up delay-300 border-[oklch(0.72_0.14_75/0.2)]">
               <CardHeader className="pb-3">
                 <div className="flex items-center gap-3">
-                  <div className="icon-box bg-gradient-to-br from-teal-500/10 to-teal-600/20 text-teal-600">
+                  <div className="icon-box bg-gradient-to-br from-[oklch(0.5_0.12_175/0.15)] to-[oklch(0.45_0.1_165/0.2)] text-[oklch(0.45_0.1_170)]">
                     <FileText className="w-5 h-5" />
                   </div>
                   <CardTitle className="text-lg">التوثيق والدعم</CardTitle>
@@ -768,8 +866,8 @@ export default function Home() {
                       key={i}
                       className="flex items-center gap-3 text-foreground/80"
                     >
-                      <div className="w-5 h-5 rounded-full bg-teal-500/10 flex items-center justify-center flex-shrink-0">
-                        <item.icon className="w-3.5 h-3.5 text-teal-500" />
+                      <div className="w-5 h-5 rounded-full bg-[oklch(0.5_0.12_175/0.1)] flex items-center justify-center flex-shrink-0">
+                        <item.icon className="w-3.5 h-3.5 text-[oklch(0.45_0.1_170)]" />
                       </div>
                       <span className="text-sm">{item.text}</span>
                     </li>
@@ -780,18 +878,18 @@ export default function Home() {
           </section>
 
           {/* Tech Stack */}
-          <Card className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-300 border-slate-700/50 overflow-hidden animate-fade-up delay-400">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(99,102,241,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(99,102,241,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+          <Card className="bg-gradient-to-br from-[oklch(0.18_0.04_155)] via-[oklch(0.16_0.035_160)] to-[oklch(0.14_0.03_155)] text-[oklch(0.85_0.02_155)] border-[oklch(0.72_0.14_75/0.2)] overflow-hidden animate-fade-up delay-400">
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(212,175,55,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(212,175,55,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
             <CardHeader className="relative">
               <div className="flex items-center gap-3">
-                <div className="icon-box-lg bg-gradient-to-br from-indigo-500/20 to-purple-600/30 text-indigo-400">
+                <div className="icon-box-lg bg-gradient-to-br from-[oklch(0.42_0.12_155/0.3)] to-[oklch(0.72_0.14_75/0.2)] text-[oklch(0.72_0.14_75)]">
                   <Wrench className="w-6 h-6" />
                 </div>
                 <div>
                   <CardTitle className="text-2xl text-white">
                     التقنيات المستخدمة
                   </CardTitle>
-                  <CardDescription className="text-slate-400">
+                  <CardDescription className="text-[oklch(0.7_0.04_155)]">
                     T3 Stack - Modern Full-Stack
                   </CardDescription>
                 </div>
@@ -803,36 +901,43 @@ export default function Home() {
                   { name: "Next.js 16", gradient: "from-white/10 to-white/5" },
                   {
                     name: "tRPC",
-                    gradient: "from-blue-500/20 to-blue-600/10",
+                    gradient:
+                      "from-[oklch(0.5_0.12_200/0.2)] to-[oklch(0.45_0.1_190/0.1)]",
                   },
                   {
                     name: "Drizzle ORM",
-                    gradient: "from-green-500/20 to-green-600/10",
+                    gradient:
+                      "from-[oklch(0.5_0.12_155/0.2)] to-[oklch(0.45_0.1_160/0.1)]",
                   },
                   {
                     name: "PostgreSQL",
-                    gradient: "from-blue-400/20 to-blue-500/10",
+                    gradient:
+                      "from-[oklch(0.5_0.12_200/0.2)] to-[oklch(0.45_0.1_195/0.1)]",
                   },
                   {
                     name: "Tailwind v4",
-                    gradient: "from-cyan-500/20 to-cyan-600/10",
+                    gradient:
+                      "from-[oklch(0.55_0.12_185/0.2)] to-[oklch(0.5_0.1_180/0.1)]",
                   },
                   {
                     name: "React Native",
-                    gradient: "from-sky-500/20 to-sky-600/10",
+                    gradient:
+                      "from-[oklch(0.55_0.12_200/0.2)] to-[oklch(0.5_0.1_195/0.1)]",
                   },
                   {
                     name: "Expo",
-                    gradient: "from-purple-500/20 to-purple-600/10",
+                    gradient:
+                      "from-[oklch(0.55_0.14_290/0.2)] to-[oklch(0.5_0.12_285/0.1)]",
                   },
                   {
                     name: "TypeScript",
-                    gradient: "from-blue-600/20 to-blue-700/10",
+                    gradient:
+                      "from-[oklch(0.5_0.12_210/0.2)] to-[oklch(0.45_0.1_205/0.1)]",
                   },
                 ].map((tech) => (
                   <div
                     key={tech.name}
-                    className={`bg-gradient-to-br ${tech.gradient} backdrop-blur-sm p-4 rounded-xl text-center border border-white/10 hover:border-white/20 transition-all hover:scale-105 cursor-default`}
+                    className={`bg-gradient-to-br ${tech.gradient} backdrop-blur-sm p-4 rounded-xl text-center border border-[oklch(0.72_0.14_75/0.15)] hover:border-[oklch(0.72_0.14_75/0.3)] transition-all hover:scale-105 cursor-default`}
                   >
                     <span className="text-sm font-mono font-medium text-white/90">
                       {tech.name}
@@ -843,9 +948,20 @@ export default function Home() {
             </CardContent>
           </Card>
 
+          {/* Islamic Decorative Divider */}
+          <ArabesqueBorder />
+
           {/* Footer */}
           <footer className="text-center space-y-4 pt-8 pb-4">
-            <Separator className="opacity-50" />
+            <Separator className="opacity-30 bg-[oklch(0.72_0.14_75/0.4)]" />
+
+            {/* Islamic Footer Decoration */}
+            <div className="flex items-center justify-center gap-3 py-2">
+              <IslamicStar className="w-3 h-3 text-[oklch(0.72_0.14_75)] opacity-50" />
+              <IslamicCrescent className="w-4 h-4 text-[oklch(0.42_0.12_155)] opacity-60" />
+              <IslamicStar className="w-3 h-3 text-[oklch(0.72_0.14_75)] opacity-50" />
+            </div>
+
             <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-muted-foreground">
               <span>صالح حتى: 5 يناير 2026</span>
               <span className="hidden sm:inline">•</span>
