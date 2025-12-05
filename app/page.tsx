@@ -23,7 +23,6 @@ import {
   FileText,
   Wrench,
   CheckCircle2,
-  Star,
   Lightbulb,
   Clock,
   Zap,
