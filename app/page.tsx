@@ -151,7 +151,7 @@ export default function Home() {
                     for optimal development speed.
                   </p>
                   <p className="text-2xl font-bold text-emerald-400">
-                    EGP 350K – 450K
+                    EGP 335K – 435K
                   </p>
                 </div>
                 <div className="mt-6 flex items-center text-sm font-medium text-emerald-400/60 group-hover:text-emerald-400 transition-colors">
@@ -177,7 +177,7 @@ export default function Home() {
                     stacks for maximum flexibility.
                   </p>
                   <p className="text-2xl font-bold text-amber-400">
-                    EGP 400K – 500K
+                    EGP 385K – 485K
                   </p>
                 </div>
                 <div className="mt-6 flex items-center text-sm font-medium text-amber-400/60 group-hover:text-amber-400 transition-colors">

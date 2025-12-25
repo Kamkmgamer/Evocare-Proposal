@@ -6,7 +6,7 @@
 
 ## Detailed Price Estimation
 
-Total Estimated Cost: **EGP 350,000 – 450,000** (based on local 2025 benchmarks for similar custom projects). Breakdown assumes 780–1,070 total hours, with efficiencies from junior delegation. Costs include urgency buffer (10%) and tools (e.g., Vercel ~EGP 5,000/year).
+Total Estimated Cost: **EGP 335,000 – 435,000** (based on local 2025 benchmarks for similar custom projects). Breakdown assumes 780–1,070 total hours, with efficiencies from junior delegation. Costs include urgency buffer (10%) and tools (e.g., Vercel ~EGP 5,000/year).
 
 | Component                       | Description                                                                  | Estimated Hours | Cost (EGP)      | Notes                                                                                                                                        |
 | ------------------------------- | ---------------------------------------------------------------------------- | --------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -15,10 +15,10 @@ Total Estimated Cost: **EGP 350,000 – 450,000** (based on local 2025 benchmark
 | **Backend Dev**                 | tRPC APIs, Prisma DB setup, quotation/CRM logic.                             | 200–250         | 75,000–93,750   | Primary responsibility of Khalil Abdalmageed as lead.                                                                                        |
 | **Integrations & Optimization** | WhatsApp API, Paymob, SEO metadata.                                          | 100–150         | 37,500–56,250   | Collaborative; juniors assist.                                                                                                               |
 | **QA/Testing/Launch**           | End-to-end tests, bug fixes, deployment (Vercel).                            | 80–120          | 30,000–45,000   | Junior 3 handles, with lead review.                                                                                                          |
-| **Miscellaneous**               | Project management (lead role), contingencies, hosting/domain (~EGP 10,000). | N/A             | 57,500–48,750   | Reduced buffer; 10% urgency premium.                                                                                                         |
-| **Total**                       |                                                                              | 780–1,070       | 350,000–450,000 | Rounded; excludes maintenance (~EGP 30,000/year). Overtime or additional features will be charged separately based on actual hours required. |
+| **Miscellaneous**               | Project management (lead role), contingencies, hosting/domain (~EGP 10,000). | N/A             | 42,500–33,750   | Reduced buffer; 10% urgency premium.                                                                                                         |
+| **Total**                       |                                                                              | 780–1,070       | 335,000–435,000 | Rounded; excludes maintenance (~EGP 30,000/year). Overtime or additional features will be charged separately based on actual hours required. |
 
-Payment Terms: 25% upfront, 35% at design approval, 25% at MVP, 15% on launch.
+Payment Terms: 50% upfront, 50% on launch.
 
 ## Clear Roadmap
 
@@ -35,11 +35,11 @@ Total: 8–14 weeks (MVP by week 8). Risks: Junior ramp-up adds 1 week if needed
 
 ## Project Shares
 
-Team structure: Lead (Khalil Abdalmageed) 40% (oversight, back-end, management); Junior 1 (Design) 20%; Junior 2 (Front-End/Dev) 25%; Junior 3 (QA/Integration) 15%. Based on effort; total 100%. For EGP 400,000 mid-estimate:
+Team structure: Lead (Khalil Abdalmageed) 40% (oversight, back-end, management); Junior 1 (Design) 20%; Junior 2 (Front-End/Dev) 25%; Junior 3 (QA/Integration) 15%. Based on effort; total 100%. For EGP 385,000 mid-estimate:
 
-- Lead (Khalil Abdalmageed): 40% = EGP 160,000.
-- Junior 1 (Design): 20% = EGP 80,000.
-- Junior 2 (Front-End/Dev): 25% = EGP 100,000.
-- Junior 3 (QA/Integration): 15% = EGP 60,000.
+- Lead (Khalil Abdalmageed): 40% = EGP 154,000.
+- Junior 1 (Design): 20% = EGP 77,000.
+- Junior 2 (Front-End/Dev): 25% = EGP 96,250.
+- Junior 3 (QA/Integration): 15% = EGP 57,750.
 
 Track via tools like Toggl for fairness; adjustments possible based on actual hours.

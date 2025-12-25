@@ -50,7 +50,7 @@ export default function CostMonoRepoPage() {
       name: "Miscellaneous",
       description: "Project management, contingencies, hosting/domain.",
       hours: "—",
-      cost: "57,500–48,750",
+      cost: "42,500–33,750",
       assignee: "Lead",
       note: "10% urgency premium.",
     },
@@ -107,10 +107,10 @@ export default function CostMonoRepoPage() {
   ];
 
   const shares = [
-    { role: "Lead (Khalil Abdalmageed)", percentage: 40, amount: "160,000" },
-    { role: "Junior 1 (Design)", percentage: 20, amount: "80,000" },
-    { role: "Junior 2 (Front-End/Dev)", percentage: 25, amount: "100,000" },
-    { role: "Junior 3 (QA/Integration)", percentage: 15, amount: "60,000" },
+    { role: "Lead (Khalil Abdalmageed)", percentage: 40, amount: "154,000" },
+    { role: "Junior 1 (Design)", percentage: 20, amount: "77,000" },
+    { role: "Junior 2 (Front-End/Dev)", percentage: 25, amount: "96,250" },
+    { role: "Junior 3 (QA/Integration)", percentage: 15, amount: "57,750" },
   ];
 
   return (
@@ -157,7 +157,7 @@ export default function CostMonoRepoPage() {
               </p>
               <div className="flex items-baseline gap-4 mb-6">
                 <span className="text-5xl md:text-7xl font-bold text-white">
-                  EGP 350K – 450K
+                  EGP 335K – 435K
                 </span>
               </div>
 
@@ -237,7 +237,7 @@ export default function CostMonoRepoPage() {
                 Total Estimate
               </span>
               <span className="text-2xl text-emerald-400 font-bold font-mono">
-                EGP 350,000 – 450,000
+                EGP 335,000 – 435,000
               </span>
             </div>
           </div>
@@ -316,7 +316,7 @@ export default function CostMonoRepoPage() {
             Project Shares
           </h2>
           <p className="text-neutral-400 mb-8">
-            Based on EGP 400,000 mid-estimate
+            Based on EGP 385,000 mid-estimate
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {shares.map((share, i) => (

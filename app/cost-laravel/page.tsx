@@ -49,7 +49,7 @@ export default function CostLaravelPage() {
       name: "Miscellaneous",
       description: "Management (lead role), contingencies, hosting.",
       hours: "—",
-      cost: "36,250–20,000",
+      cost: "5,000–21,250",
       assignee: "Lead",
       note: "10% buffer.",
     },
@@ -106,10 +106,10 @@ export default function CostLaravelPage() {
   ];
 
   const shares = [
-    { role: "Lead (Khalil Abdalmageed)", percentage: 40, amount: "180,000" },
-    { role: "Junior 1 (Design)", percentage: 20, amount: "90,000" },
-    { role: "Junior 2 (Front-End)", percentage: 25, amount: "112,500" },
-    { role: "Junior 3 (QA/Integration)", percentage: 15, amount: "67,500" },
+    { role: "Lead (Khalil Abdalmageed)", percentage: 40, amount: "174,000" },
+    { role: "Junior 1 (Design)", percentage: 20, amount: "87,000" },
+    { role: "Junior 2 (Front-End)", percentage: 25, amount: "108,750" },
+    { role: "Junior 3 (QA/Integration)", percentage: 15, amount: "65,250" },
   ];
 
   return (
@@ -176,7 +176,7 @@ export default function CostLaravelPage() {
               </p>
               <div className="flex items-baseline gap-4 mb-6 flex-wrap">
                 <span className="text-5xl md:text-7xl font-bold text-white">
-                  EGP 400K – 500K
+                  EGP 385K – 485K
                 </span>
               </div>
 
@@ -273,7 +273,7 @@ export default function CostLaravelPage() {
                   </td>
                   <td className="py-5 px-4 text-center">
                     <span className="text-2xl font-bold text-amber-400 font-mono">
-                      400,000–500,000
+                      385,000–485,000
                     </span>
                   </td>
                   <td className="py-5 px-4"></td>
@@ -363,7 +363,7 @@ export default function CostLaravelPage() {
             Project Shares
           </h2>
           <p className="text-neutral-400 mb-8">
-            Based on EGP 450,000 mid-estimate
+            Based on EGP 435,000 mid-estimate
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
