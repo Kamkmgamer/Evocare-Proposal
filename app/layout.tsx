@@ -1,39 +1,14 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Sans_Arabic } from "next/font/google";
+import { Inter, Cinzel } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const notoArabic = Noto_Sans_Arabic({
-  variable: "--font-arabic",
-  subsets: ["arabic"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  display: "swap",
-});
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const cinzel = Cinzel({ subsets: ["latin"], variable: "--font-cinzel" });
 
 export const metadata: Metadata = {
-  title: "HollyQuran CMS - عرض السعر | Development Proposal",
+  title: "Evocare | Luxury Automotive Enhancement",
   description:
-    "عرض مقترح لتطوير نظام إدارة المحتوى لتطبيق القرآن الكريم - CMS Development Proposal for Quran App",
-  keywords: [
-    "Quran App",
-    "CMS",
-    "تطبيق القرآن",
-    "نظام إدارة المحتوى",
-    "React Native",
-    "Next.js",
-  ],
-  authors: [{ name: "HollyQuran Development Team" }],
-  openGraph: {
-    title: "HollyQuran CMS - Development Proposal",
-    description: "عرض مقترح لتطوير نظام إدارة المحتوى لتطبيق القرآن الكريم",
-    type: "website",
-    locale: "ar_SA",
-  },
+    "Premium automotive care, detailing, and customization services.",
 };
 
 export default function RootLayout({
@@ -42,9 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl" className="scroll-smooth">
+    <html lang="en" className="dark">
       <body
-        className={`${inter.variable} ${notoArabic.variable} antialiased selection:bg-primary/20 selection:text-primary`}
+        className={`${inter.variable} ${cinzel.variable} font-sans bg-background text-foreground min-h-screen flex flex-col`}
       >
         {children}
       </body>
