@@ -128,6 +128,64 @@ export default function Home() {
               </div>
             </Link>
           </div>
+
+          {/* Cost Estimates Section */}
+          <h3 className="text-2xl font-serif mt-16 mb-8 text-center text-neutral-400">
+            COST ESTIMATES
+          </h3>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Link href="/cost-monorepo" className="group">
+              <div className="h-full p-8 bg-emerald-500/5 border border-emerald-500/20 hover:border-emerald-500/50 transition-all duration-500 hover:bg-emerald-500/10 flex flex-col justify-between min-h-[280px] relative overflow-hidden">
+                <div className="absolute top-4 right-4 px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-bold rounded-full">
+                  RECOMMENDED
+                </div>
+                <div>
+                  <div className="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                    <Calculator className="w-6 h-6 text-emerald-400" />
+                  </div>
+                  <h3 className="text-xl font-medium mb-3 text-white">
+                    Full-Stack Next.js
+                  </h3>
+                  <p className="text-neutral-400 text-sm leading-relaxed mb-4">
+                    Monorepo solution with tRPC + PostgreSQL. Unified codebase
+                    for optimal development speed.
+                  </p>
+                  <p className="text-2xl font-bold text-emerald-400">
+                    EGP 350K – 450K
+                  </p>
+                </div>
+                <div className="mt-6 flex items-center text-sm font-medium text-emerald-400/60 group-hover:text-emerald-400 transition-colors">
+                  VIEW DETAILS <ChevronRight className="w-4 h-4 ml-2" />
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/cost-laravel" className="group">
+              <div className="h-full p-8 bg-amber-500/5 border border-amber-500/20 hover:border-amber-500/50 transition-all duration-500 hover:bg-amber-500/10 flex flex-col justify-between min-h-[280px] relative overflow-hidden">
+                <div className="absolute top-4 right-4 px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded-full">
+                  ALTERNATIVE
+                </div>
+                <div>
+                  <div className="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                    <Calculator className="w-6 h-6 text-amber-400" />
+                  </div>
+                  <h3 className="text-xl font-medium mb-3 text-white">
+                    React + Laravel
+                  </h3>
+                  <p className="text-neutral-400 text-sm leading-relaxed mb-4">
+                    Decoupled architecture with separate frontend and backend
+                    stacks for maximum flexibility.
+                  </p>
+                  <p className="text-2xl font-bold text-amber-400">
+                    EGP 400K – 500K
+                  </p>
+                </div>
+                <div className="mt-6 flex items-center text-sm font-medium text-amber-400/60 group-hover:text-amber-400 transition-colors">
+                  VIEW DETAILS <ChevronRight className="w-4 h-4 ml-2" />
+                </div>
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
 

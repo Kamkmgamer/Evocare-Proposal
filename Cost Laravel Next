@@ -1,0 +1,45 @@
+# Document 2: Detailed Price Estimation, Roadmap, and Project Shares for Decoupled React + Laravel Approach
+
+**Prepared by:** Khalil Abdalmageed, Back-End Developer & Team Lead  
+**Date:** December 25, 2025  
+**Purpose:** This document details Approach 2 (Decoupled React Frontend + Laravel Backend with PostgreSQL), tailored for the Evocare project. The estimate reflects efficient team collaboration with Khalil Abdalmageed as senior lead overseeing 3 juniors, incorporating local Egyptian market standards for domestic clients. Includes roadmap and shares.
+
+## Detailed Price Estimation
+
+Total Estimated Cost: **EGP 400,000 – 500,000** (slightly higher than Next.js due to separation overheads; based on 970–1,280 hours, with junior delegation savings).
+
+| Component                       | Description                                                   | Estimated Hours | Cost (EGP)      | Notes                                                                                               |
+| ------------------------------- | ------------------------------------------------------------- | --------------- | --------------- | --------------------------------------------------------------------------------------------------- |
+| \*\*UI/UX Design                | Wireframing, mockups for React pages.                         | 120–180         | 45,000–67,500   | Junior 1 leads.                                                                                     |
+| **Frontend Dev**                | React app, configurator UI, API consumption.                  | 350–450         | 131,250–168,750 | Junior 2 focus; more hours due to mocking.                                                          |
+| **Backend Dev**                 | Laravel APIs, Eloquent DB, CRM/quotation engine.              | 250–300         | 93,750–112,500  | Primary responsibility of Khalil Abdalmageed as lead.                                               |
+| **Integrations & Optimization** | WhatsApp/Paymob via queues, React hooks.                      | 150–200         | 56,250–75,000   | Team effort.                                                                                        |
+| **QA/Testing/Launch**           | Cross-stack tests, deployment (e.g., AWS + Netlify).          | 100–150         | 37,500–56,250   | Junior 3 handles.                                                                                   |
+| **Miscellaneous**               | Management (lead role), contingencies, hosting (~EGP 10,000). | N/A             | 36,250–20,000   | Reduced; 10% buffer.                                                                                |
+| **Total**                       |                                                               | 970–1,280       | 400,000–500,000 | Rounded. Overtime or additional features will be charged separately based on actual hours required. |
+
+Payment Terms: 25% upfront, 35% at design approval, 25% at MVP, 15% on launch.
+
+## Clear Roadmap
+
+Extended for separation (13–18 weeks total). Leadership delegates to juniors.
+
+1. **Phase 1: UI/UX Research & Initial Design (1–2 weeks)**: Analysis. Junior 1 leads.
+2. **Phase 2: UI/UX Final Design (1–2 weeks)**: Finalize. Junior 1 executes.
+3. **Phase 3: Frontend Development (3–4 weeks)**: React build. Junior 2 develops.
+4. **Phase 4-5: Backend Development (Core + Business Logic) (3–4 weeks)**: Laravel APIs. Lead directs.
+5. **Phase 6: Integration & Optimization (2–3 weeks)**: Connect stacks. Team effort.
+6. **Phase 7: QA, Testing & Launch (2–3 weeks)**: Testing. Junior 3 leads.
+
+Total: 12–18 weeks (MVP by week 10). Risks: Integration delays.
+
+## Project Shares
+
+Team structure: Lead (Khalil Abdalmageed) 40%, Junior 1 (Design) 20%, Junior 2 (Front-End) 25%, Junior 3 (QA/Integration) 15%. For EGP 450,000 mid-estimate:
+
+- Lead (Khalil Abdalmageed): 40% = EGP 180,000.
+- Junior 1 (Design): 20% = EGP 90,000.
+- Junior 2 (Front-End): 25% = EGP 112,500.
+- Junior 3 (QA/Integration): 15% = EGP 67,500.
+
+This ensures equitable distribution aligned with local market and team dynamics.
