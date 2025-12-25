@@ -287,7 +287,6 @@ export default function CostLaravelPage() {
         <section className="mb-24">
           <h2 className="text-3xl font-serif text-white mb-8">Payment Terms</h2>
           <div className="relative">
-            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-amber-500/50 via-orange-500/50 to-amber-500/50 rounded-full" />
             <div className="relative grid grid-cols-2 gap-8 max-w-3xl mx-auto">
               {paymentTerms.map((term, i) => (
                 <div key={i} className="text-center">
