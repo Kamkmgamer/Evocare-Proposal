@@ -189,38 +189,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Cost Estimate Placeholder */}
-      <section className="py-24 bg-black relative">
-        <div className="container mx-auto px-6 max-w-4xl text-center">
-          <div className="inline-flex items-center justify-center p-4 bg-white/5 rounded-full mb-8 border border-white/10">
-            <Calculator className="w-6 h-6 mr-3 text-neutral-400" />
-            <span className="text-neutral-300 tracking-wide">
-              COST ESTIMATE
-            </span>
-          </div>
-
-          <h2 className="text-4xl md:text-5xl font-serif mb-8 bg-gradient-to-r from-neutral-200 to-neutral-600 bg-clip-text text-transparent">
-            Investment Overview
-          </h2>
-
-          <div className="p-12 border border-white/10 bg-neutral-900/50 backdrop-blur-sm rounded-lg relative overflow-hidden group hover:border-white/20 transition-all">
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-            <p className="text-2xl font-light text-neutral-300 mb-2">
-              Total Estimated Project Value
-            </p>
-            <p
-              className="text-5xl md:text-7xl font-bold tracking-tight text-white my-6 blur-sm select-none"
-              title="Reveal pending"
-            >
-              $ XX,XXX
-            </p>
-            <p className="text-neutral-500 uppercase tracking-widest text-sm">
-              Detailed Breakdown Available in Spec
-            </p>
-          </div>
-        </div>
-      </section>
-
       <footer className="py-12 border-t border-white/5 text-center text-neutral-600 text-sm">
         <p>&copy; 2025 Evocare Project Proposal. Confidential.</p>
       </footer>

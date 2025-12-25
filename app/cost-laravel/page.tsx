@@ -55,6 +55,11 @@ export default function CostLaravelPage() {
     },
   ];
 
+  const paymentTerms = [
+    { pct: "50%", label: "Upfront" },
+    { pct: "50%", label: "Launch" },
+  ];
+
   const roadmap = [
     {
       phase: "1",
@@ -170,14 +175,11 @@ export default function CostLaravelPage() {
                 Total Estimated Investment
               </p>
               <div className="flex items-baseline gap-4 mb-6 flex-wrap">
-                <span className="text-6xl md:text-8xl font-bold text-white">
-                  EGP 400K
-                </span>
-                <span className="text-3xl text-neutral-500">–</span>
-                <span className="text-6xl md:text-8xl font-bold text-white">
-                  500K
+                <span className="text-5xl md:text-7xl font-bold text-white">
+                  EGP 400K – 500K
                 </span>
               </div>
+
               <div className="flex flex-wrap gap-6 text-sm text-neutral-400">
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4 text-amber-400" />
@@ -286,20 +288,15 @@ export default function CostLaravelPage() {
           <h2 className="text-3xl font-serif text-white mb-8">Payment Terms</h2>
           <div className="relative">
             <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-amber-500/50 via-orange-500/50 to-amber-500/50 rounded-full" />
-            <div className="relative grid grid-cols-4 gap-4">
-              {[
-                { pct: "25%", label: "Upfront", pos: "start" },
-                { pct: "35%", label: "Design Approval", pos: "mid" },
-                { pct: "25%", label: "MVP", pos: "mid" },
-                { pct: "15%", label: "Launch", pos: "end" },
-              ].map((term, i) => (
+            <div className="relative grid grid-cols-2 gap-8 max-w-3xl mx-auto">
+              {paymentTerms.map((term, i) => (
                 <div key={i} className="text-center">
-                  <div className="w-4 h-4 mx-auto bg-amber-500 rounded-full border-4 border-[#080810] mb-4 relative z-10" />
-                  <div className="p-4 bg-white/[0.02] border border-white/10 rounded-xl">
-                    <div className="text-3xl font-bold text-white mb-1">
+                  <div className="w-6 h-6 mx-auto bg-amber-500 rounded-full border-4 border-[#080810] mb-6 relative z-10" />
+                  <div className="p-8 bg-white/[0.02] border border-white/10 rounded-xl">
+                    <div className="text-5xl font-bold text-white mb-2">
                       {term.pct}
                     </div>
-                    <div className="text-xs text-neutral-500 uppercase tracking-wider">
+                    <div className="text-base text-neutral-400 uppercase tracking-wider">
                       {term.label}
                     </div>
                   </div>
@@ -442,7 +439,7 @@ export default function CostLaravelPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-amber-400 mt-1">•</span>
-                    Laravel's robust ecosystem for complex business logic
+                    Laravel&apos;s robust ecosystem for complex business logic
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-amber-400 mt-1">•</span>

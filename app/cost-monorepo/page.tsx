@@ -56,6 +56,11 @@ export default function CostMonoRepoPage() {
     },
   ];
 
+  const paymentTerms = [
+    { pct: "50%", label: "Upfront" },
+    { pct: "50%", label: "Launch" },
+  ];
+
   const roadmap = [
     {
       phase: "1",
@@ -151,14 +156,11 @@ export default function CostMonoRepoPage() {
                 Total Estimated Investment
               </p>
               <div className="flex items-baseline gap-4 mb-6">
-                <span className="text-6xl md:text-8xl font-bold text-white">
-                  EGP 350K
-                </span>
-                <span className="text-3xl text-neutral-500">–</span>
-                <span className="text-6xl md:text-8xl font-bold text-white">
-                  450K
+                <span className="text-5xl md:text-7xl font-bold text-white">
+                  EGP 350K – 450K
                 </span>
               </div>
+
               <div className="flex flex-wrap gap-6 text-sm text-neutral-400">
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4 text-emerald-400" />
@@ -244,21 +246,16 @@ export default function CostMonoRepoPage() {
         {/* Payment Terms */}
         <section className="mb-24">
           <h2 className="text-3xl font-serif text-white mb-8">Payment Terms</h2>
-          <div className="grid sm:grid-cols-4 gap-4">
-            {[
-              { pct: "25%", label: "Upfront" },
-              { pct: "35%", label: "Design Approval" },
-              { pct: "25%", label: "MVP Delivery" },
-              { pct: "15%", label: "Launch" },
-            ].map((term, i) => (
+          <div className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {paymentTerms.map((term, i) => (
               <div
                 key={i}
-                className="relative p-6 rounded-xl border border-white/10 bg-white/[0.02] text-center group hover:border-emerald-500/30 transition-all"
+                className="relative p-12 rounded-xl border border-white/10 bg-white/[0.02] text-center group hover:border-emerald-500/30 transition-all"
               >
-                <div className="text-4xl font-bold text-white mb-2">
+                <div className="text-6xl font-bold text-white mb-4">
                   {term.pct}
                 </div>
-                <div className="text-sm text-neutral-500">{term.label}</div>
+                <div className="text-lg text-neutral-400">{term.label}</div>
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity rounded-b-xl" />
               </div>
             ))}
