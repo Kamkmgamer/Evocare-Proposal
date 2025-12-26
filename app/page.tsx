@@ -129,65 +129,49 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Cost Estimates Section */}
+          {/* Commercial Proposal Section */}
           <h3 className="text-2xl font-serif mt-16 mb-8 text-center text-neutral-400">
-            COST ESTIMATES
+            COMMERCIAL
           </h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Link href="/cost-monorepo" className="group">
-              <div className="h-full p-8 bg-emerald-500/5 border border-emerald-500/20 hover:border-emerald-500/50 transition-all duration-500 hover:bg-emerald-500/10 flex flex-col justify-between min-h-[280px] relative overflow-hidden">
-                <div className="absolute top-4 right-4 px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-bold rounded-full">
-                  RECOMMENDED
-                </div>
-                <div>
-                  <div className="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
-                    <Calculator className="w-6 h-6 text-emerald-400" />
-                  </div>
-                  <h3 className="text-xl font-medium mb-3 text-white">
-                    Full-Stack Next.js
-                  </h3>
-                  <p className="text-neutral-400 text-sm leading-relaxed mb-4">
-                    Monorepo solution with tRPC + PostgreSQL. Unified codebase
-                    for optimal development speed.
-                  </p>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-sm bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded font-bold">SAVE 15K</span>
-                  </div>
-                  <p className="text-2xl font-bold text-emerald-400">
-                    <s className="text-emerald-400/50">EGP 350K – 450K</s> EGP 335K – 435K
-                  </p>
-                </div>
-                <div className="mt-6 flex items-center text-sm font-medium text-emerald-400/60 group-hover:text-emerald-400 transition-colors">
-                  VIEW DETAILS <ChevronRight className="w-4 h-4 ml-2" />
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/cost-laravel" className="group">
-              <div className="h-full p-8 bg-amber-500/5 border border-amber-500/20 hover:border-amber-500/50 transition-all duration-500 hover:bg-amber-500/10 flex flex-col justify-between min-h-[280px] relative overflow-hidden">
+          <div className="flex justify-center">
+            <Link href="/costs" className="group w-full max-w-2xl">
+              <div className="h-full p-8 bg-amber-500/5 border border-amber-500/20 hover:border-amber-500/50 transition-all duration-500 hover:bg-amber-500/10 flex flex-col justify-between min-h-[280px] relative overflow-hidden rounded-xl">
                 <div className="absolute top-4 right-4 px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-bold rounded-full">
-                  ALTERNATIVE
+                  NEW
                 </div>
                 <div>
                   <div className="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                     <Calculator className="w-6 h-6 text-amber-400" />
                   </div>
-                  <h3 className="text-xl font-medium mb-3 text-white">
-                    React + Laravel
+                  <h3 className="text-2xl font-medium mb-3 text-white">
+                    Commercial Proposal
                   </h3>
-                  <p className="text-neutral-400 text-sm leading-relaxed mb-4">
-                    Decoupled architecture with separate frontend and backend
-                    stacks for maximum flexibility.
+                  <p className="text-neutral-400 text-sm leading-relaxed mb-6">
+                    Transparent, feature-based pricing breakdown. Detailed
+                    assessment for the entire Evocare platform including
+                    Configurator, CMS, and Mobile capabilities.
                   </p>
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-sm bg-amber-500/20 text-amber-400 px-2 py-1 rounded font-bold">SAVE 15K</span>
+
+                  <div className="flex flex-wrap gap-4 text-sm text-neutral-300 mb-6">
+                    <span className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-amber-500"></div>{" "}
+                      Feature Based
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-amber-500"></div>{" "}
+                      Modular Control
+                    </span>
                   </div>
-                  <p className="text-2xl font-bold text-amber-400">
-                    <s className="text-amber-400/50">EGP 400K – 500K</s> EGP 385K – 485K
+
+                  <p className="text-3xl font-bold text-amber-400">
+                    255K – 290K{" "}
+                    <span className="text-sm font-normal text-neutral-400 self-end">
+                      EGP
+                    </span>
                   </p>
                 </div>
-                <div className="mt-6 flex items-center text-sm font-medium text-amber-400/60 group-hover:text-amber-400 transition-colors">
-                  VIEW DETAILS <ChevronRight className="w-4 h-4 ml-2" />
+                <div className="mt-8 flex items-center text-sm font-medium text-amber-400/60 group-hover:text-amber-400 transition-colors">
+                  VIEW FULL BREAKDOWN <ChevronRight className="w-4 h-4 ml-2" />
                 </div>
               </div>
             </Link>
