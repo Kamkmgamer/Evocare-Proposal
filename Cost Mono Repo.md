@@ -6,7 +6,7 @@
 
 ## Detailed Price Estimation
 
-Total Estimated Cost: **EGP 335,000 – 435,000** (based on local 2025 benchmarks for similar custom projects). Breakdown assumes 780–1,070 total hours, with efficiencies from junior delegation. Costs include urgency buffer (10%) and tools (e.g., Vercel ~EGP 5,000/year).
+Total Estimated Cost: **~~EGP 350,000 – 450,000~~ EGP 335,000 – 435,000** (based on local 2025 benchmarks for similar custom projects). Breakdown assumes 780–1,070 total hours, with efficiencies from junior delegation. Costs include urgency buffer (10%) and tools (e.g., Vercel ~EGP 5,000/year). **Save 15K!**
 
 | Component                       | Description                                                                  | Estimated Hours | Cost (EGP)      | Notes                                                                                                                                        |
 | ------------------------------- | ---------------------------------------------------------------------------- | --------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -16,7 +16,7 @@ Total Estimated Cost: **EGP 335,000 – 435,000** (based on local 2025 benchmark
 | **Integrations & Optimization** | WhatsApp API, Paymob, SEO metadata.                                          | 100–150         | 37,500–56,250   | Collaborative; juniors assist.                                                                                                               |
 | **QA/Testing/Launch**           | End-to-end tests, bug fixes, deployment (Vercel).                            | 80–120          | 30,000–45,000   | Junior 3 handles, with lead review.                                                                                                          |
 | **Miscellaneous**               | Project management (lead role), contingencies, hosting/domain (~EGP 10,000). | N/A             | 42,500–33,750   | Reduced buffer; 10% urgency premium.                                                                                                         |
-| **Total**                       |                                                                              | 780–1,070       | 335,000–435,000 | Rounded; excludes maintenance (~EGP 30,000/year). Overtime or additional features will be charged separately based on actual hours required. |
+| **Total**                       |                                                                              | 780–1,070       | ~~350,000–450,000~~ 335,000–435,000 | Rounded; excludes maintenance (~EGP 30,000/year). Overtime or additional features will be charged separately based on actual hours required. |
 
 Payment Terms: 50% upfront, 50% on launch.
 

@@ -155,9 +155,14 @@ export default function CostMonoRepoPage() {
               <p className="text-sm uppercase tracking-[0.3em] text-neutral-500 mb-4">
                 Total Estimated Investment
               </p>
-              <div className="flex items-baseline gap-4 mb-6">
+              <div className="flex items-baseline gap-4 mb-2">
                 <span className="text-5xl md:text-7xl font-bold text-white">
-                  EGP 335K – 435K
+                  <s className="text-neutral-500">EGP 350K – 450K</s> EGP 335K – 435K
+                </span>
+              </div>
+              <div className="mb-4">
+                <span className="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-sm font-bold rounded-full">
+                  SAVE 15K
                 </span>
               </div>
 
@@ -237,7 +242,7 @@ export default function CostMonoRepoPage() {
                 Total Estimate
               </span>
               <span className="text-2xl text-emerald-400 font-bold font-mono">
-                EGP 335,000 – 435,000
+                <s className="text-emerald-400/50">EGP 350,000 – 450,000</s> EGP 335,000 – 435,000
               </span>
             </div>
           </div>

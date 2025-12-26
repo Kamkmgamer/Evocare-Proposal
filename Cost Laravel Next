@@ -6,7 +6,7 @@
 
 ## Detailed Price Estimation
 
-Total Estimated Cost: **EGP 385,000 – 485,000** (slightly higher than Next.js due to separation overheads; based on 970–1,280 hours, with junior delegation savings).
+Total Estimated Cost: **~~EGP 400,000 – 500,000~~ EGP 385,000 – 485,000** (slightly higher than Next.js due to separation overheads; based on 970–1,280 hours, with junior delegation savings). **Save 15K!**
 
 | Component                       | Description                                                   | Estimated Hours | Cost (EGP)      | Notes                                                                                               |
 | ------------------------------- | ------------------------------------------------------------- | --------------- | --------------- | --------------------------------------------------------------------------------------------------- |
@@ -16,7 +16,7 @@ Total Estimated Cost: **EGP 385,000 – 485,000** (slightly higher than Next.js 
 | **Integrations & Optimization** | WhatsApp/Paymob via queues, React hooks.                      | 150–200         | 56,250–75,000   | Team effort.                                                                                        |
 | **QA/Testing/Launch**           | Cross-stack tests, deployment (e.g., AWS + Netlify).          | 100–150         | 37,500–56,250   | Junior 3 handles.                                                                                   |
 | **Miscellaneous**               | Management (lead role), contingencies, hosting (~EGP 10,000). | N/A             | 21,250–5,000   | Reduced; 10% buffer.                                                                                |
-| **Total**                       |                                                               | 970–1,280       | 385,000–485,000 | Rounded. Overtime or additional features will be charged separately based on actual hours required. |
+| **Total**                       |                                                               | 970–1,280       | ~~400,000–500,000~~ 385,000–485,000 | Rounded. Overtime or additional features will be charged separately based on actual hours required. |
 
 Payment Terms: 50% upfront, 50% on launch.
 

@@ -150,8 +150,11 @@ export default function Home() {
                     Monorepo solution with tRPC + PostgreSQL. Unified codebase
                     for optimal development speed.
                   </p>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-sm bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded font-bold">SAVE 15K</span>
+                  </div>
                   <p className="text-2xl font-bold text-emerald-400">
-                    EGP 335K – 435K
+                    <s className="text-emerald-400/50">EGP 350K – 450K</s> EGP 335K – 435K
                   </p>
                 </div>
                 <div className="mt-6 flex items-center text-sm font-medium text-emerald-400/60 group-hover:text-emerald-400 transition-colors">
@@ -176,8 +179,11 @@ export default function Home() {
                     Decoupled architecture with separate frontend and backend
                     stacks for maximum flexibility.
                   </p>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-sm bg-amber-500/20 text-amber-400 px-2 py-1 rounded font-bold">SAVE 15K</span>
+                  </div>
                   <p className="text-2xl font-bold text-amber-400">
-                    EGP 385K – 485K
+                    <s className="text-amber-400/50">EGP 400K – 500K</s> EGP 385K – 485K
                   </p>
                 </div>
                 <div className="mt-6 flex items-center text-sm font-medium text-amber-400/60 group-hover:text-amber-400 transition-colors">

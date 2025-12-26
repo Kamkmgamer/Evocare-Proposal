@@ -174,9 +174,14 @@ export default function CostLaravelPage() {
               <p className="text-sm uppercase tracking-[0.3em] text-neutral-500 mb-4">
                 Total Estimated Investment
               </p>
-              <div className="flex items-baseline gap-4 mb-6 flex-wrap">
+              <div className="flex items-baseline gap-4 mb-2 flex-wrap">
                 <span className="text-5xl md:text-7xl font-bold text-white">
-                  EGP 385K – 485K
+                  <s className="text-neutral-500">EGP 400K – 500K</s> EGP 385K – 485K
+                </span>
+              </div>
+              <div className="mb-4">
+                <span className="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-sm font-bold rounded-full">
+                  SAVE 15K
                 </span>
               </div>
 
@@ -273,7 +278,7 @@ export default function CostLaravelPage() {
                   </td>
                   <td className="py-5 px-4 text-center">
                     <span className="text-2xl font-bold text-amber-400 font-mono">
-                      385,000–485,000
+                      <s className="text-amber-400/50">400,000–500,000</s> 385,000–485,000
                     </span>
                   </td>
                   <td className="py-5 px-4"></td>
